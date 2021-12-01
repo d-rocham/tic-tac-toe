@@ -1,0 +1,77 @@
+$main: #F3B229;
+$second: #103f79;
+
+$highlight-first: #006572;
+$highlight-second: #008373;
+$highlight-third: #DFE0DF;
+
+
+$step-0: #{"clamp(1.09rem, 0.94rem + 0.79vw, 1.50rem)"};
+$step-1: #{"clamp(1.37rem, 1.02rem + 1.72vw, 2.25rem)"};
+$step-2: #{"clamp(1.71rem, 1.06rem + 3.25vw, 3.38rem)"};
+$step-3: #{"clamp(2.14rem, 0.99rem + 5.71vw, 5.06rem)"};
+
+$cell-size: clamp(80px, 20vw, 170px);
+
+$stagger: 100ms;
+
+@keyframes cell-entrance {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+        filter: hue-rotate(180deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+}
+
+@mixin text($font, $color, $size) {
+    font-family: $font;
+    font-size: $size;
+    color: $color;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    width: 100%;
+}
+
+header {
+    background-color: $main;
+    padding: $step-0;
+}
+
+.header__title {
+    @include text(serif, $second, $step-3);
+    text-align: center;
+    margin: 0 auto;
+}
+
+main {
+    background-color: $main;
+}
+
+.board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+    gap: 0.5rem;
+}
+
+.board__cell {
+    width: $cell-size;
+    height: $cell-size;
+    background-color: $highlight-first;
+
+    animation: cell-entrance 700ms ease-out;
+    animation-fill-mode: backwards;
+}

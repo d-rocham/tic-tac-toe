@@ -1,0 +1,84 @@
+@-webkit-keyframes cell-entrance {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    -webkit-filter: hue-rotate(180deg);
+            filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes cell-entrance {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    -webkit-filter: hue-rotate(180deg);
+            filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  background-color: #F3B229;
+  padding: clamp(1.09rem, 0.94rem + 0.79vw, 1.50rem);
+}
+
+.header__title {
+  font-family: serif;
+  font-size: clamp(2.14rem, 0.99rem + 5.71vw, 5.06rem);
+  color: #103f79;
+  text-align: center;
+  margin: 0 auto;
+}
+
+main {
+  background-color: #F3B229;
+}
+
+.board {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  gap: 0.5rem;
+}
+
+.board__cell {
+  width: clamp(80px, 20vw, 170px);
+  height: clamp(80px, 20vw, 170px);
+  background-color: #006572;
+  -webkit-animation: cell-entrance 700ms ease-out;
+          animation: cell-entrance 700ms ease-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+/*# sourceMappingURL=style.css.map */
