@@ -80,11 +80,21 @@ main {
           animation: cell-entrance 700ms ease-out;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 
+/*Entry animation code adapted from https://github.com/fireship-io/224-animated-css-grid by codediodeio*/
 .board__cell:nth-child(1) {
   -webkit-animation-delay: calc(1 * 80ms);
           animation-delay: calc(1 * 80ms);
+}
+
+.board__cell:nth-child(1):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .board__cell:nth-child(2) {
@@ -92,9 +102,19 @@ main {
           animation-delay: calc(2 * 80ms);
 }
 
+.board__cell:nth-child(2):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .board__cell:nth-child(3) {
   -webkit-animation-delay: calc(3 * 80ms);
           animation-delay: calc(3 * 80ms);
+}
+
+.board__cell:nth-child(3):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .board__cell:nth-child(4) {
@@ -102,9 +122,19 @@ main {
           animation-delay: calc(4 * 80ms);
 }
 
+.board__cell:nth-child(4):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .board__cell:nth-child(5) {
   -webkit-animation-delay: calc(5 * 80ms);
           animation-delay: calc(5 * 80ms);
+}
+
+.board__cell:nth-child(5):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .board__cell:nth-child(6) {
@@ -112,9 +142,19 @@ main {
           animation-delay: calc(6 * 80ms);
 }
 
+.board__cell:nth-child(6):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .board__cell:nth-child(7) {
   -webkit-animation-delay: calc(7 * 80ms);
           animation-delay: calc(7 * 80ms);
+}
+
+.board__cell:nth-child(7):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .board__cell:nth-child(8) {
@@ -122,8 +162,18 @@ main {
           animation-delay: calc(8 * 80ms);
 }
 
+.board__cell:nth-child(8):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .board__cell:nth-child(9) {
   -webkit-animation-delay: calc(9 * 80ms);
           animation-delay: calc(9 * 80ms);
+}
+
+.board__cell:nth-child(9):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */

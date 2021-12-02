@@ -74,10 +74,16 @@ main {
 
     animation: cell-entrance 700ms ease-out;
     animation-fill-mode: backwards;
+    transition: transform .2s;
 }
+/*Entry animation code adapted from https://github.com/fireship-io/224-animated-css-grid by codediodeio*/
 
 @for $i from 1 through 9 {
     .board__cell:nth-child(#{$i}){
         animation-delay: calc(#{$i} * #{$stagger});
+    }
+
+    .board__cell:nth-child(#{$i}):hover{
+        transform: scale(1.1);
     }
 }
