@@ -57,6 +57,12 @@ header {
 
 main {
   background-color: #F3B229;
+  padding-bottom: 1%;
+}
+
+footer {
+  background-color: #008373;
+  padding: clamp(1.71rem, 1.06rem + 3.25vw, 3.38rem);
 }
 
 .board {

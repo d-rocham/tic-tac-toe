@@ -57,6 +57,12 @@ header {
 
 main {
     background-color: $main;
+    padding-bottom: 1%;
+}
+
+footer {
+    background-color: $highlight-second;
+    padding: $step-2;
 }
 
 .board {
