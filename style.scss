@@ -65,6 +65,16 @@ footer {
     padding: $step-2;
 }
 
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.inactive {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .board {
     display: grid;
     justify-content: center;

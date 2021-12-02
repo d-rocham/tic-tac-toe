@@ -65,6 +65,16 @@ footer {
   padding: clamp(1.71rem, 1.06rem + 3.25vw, 3.38rem);
 }
 
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .board {
   display: -ms-grid;
   display: grid;
