@@ -13,7 +13,7 @@ $step-3: #{"clamp(2.14rem, 0.99rem + 5.71vw, 5.06rem)"};
 
 $cell-size: clamp(80px, 20vw, 170px);
 
-$stagger: 100ms;
+$stagger: 80ms;
 
 @keyframes cell-entrance {
     from {
@@ -74,4 +74,10 @@ main {
 
     animation: cell-entrance 700ms ease-out;
     animation-fill-mode: backwards;
+}
+
+@for $i from 1 through 9 {
+    .board__cell:nth-child(#{$i}){
+        animation-delay: calc(#{$i} * #{$stagger});
+    }
 }
