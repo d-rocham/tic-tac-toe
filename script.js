@@ -26,6 +26,7 @@ const Gameboard = (() => {
 })();
 
 const Player = (name) => {
+    /* ATTENTION: There's no need for an array for each player */
     /* Player objects will keep track of each player's marks */
 
     //TODO: Is this really necessary? Is there maybe an easier way to do this?
@@ -77,4 +78,13 @@ const pageController = ((registration_container, game_container, modal_container
 
 })(document.querySelector(".start-game-container"), document.querySelector(".game-container"), document.querySelector(".modal"));
 
+
+/*
+    ) Add event listener to start game
+    ) Render board & create array for board
+    ) Create status board array
+
+
+
+*/
 
